@@ -313,16 +313,20 @@ college_recent_grads %>%
 
 9.  Create a scatterplot of median income vs. proportion of women in that major, coloured by whether the major is in a STEM field or not. Describe the association between these three variables.
 
+***There are many women without STEM majors that have little median income, while there are few women with STEM majors that have a high median income.***
+
 ```{r}
 college_recent_grads %>%
-  ggplot(data = college_recent_grads, mapping = aes(x = median, y = women)) +
-  geom_point()
+  ggplot(data = college_recent_grads, mapping = aes(x = median, y = women))+
+  geom_point(aes(color = major_type))
 ```
 ## Further exploration
 
 10. Ask a question of interest to you, and answer it using summary statistic(s) and/or visualization(s).
 
 ***What is the relationship between a major and its category?***
+
+***There are majors that come from the same major category.***
 ```{r eval=TRUE}
 college_recent_grads %>%
   arrange(major) %>%
