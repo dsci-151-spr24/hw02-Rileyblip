@@ -240,7 +240,8 @@ college_recent_grads %>%
 
 ```{r eval=TRUE}
 college_recent_grads %>%
-  count(major_category) 
+  count(major_category) %>%
+  arrange(n)
 ```
 
 🧶 ✅ ⬆️ Knit, *commit, and push your changes to GitHub with an appropriate commit message. Make sure to commit and push all changed files so that your Git pane is cleared up afterwards.*
